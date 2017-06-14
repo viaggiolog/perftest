@@ -10,5 +10,15 @@
 
 </head>
 <body>
-非常に遅いページ
+<div id="loading">読み込み中です。</div>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    for(var i=0; i<500000000; i++){
+       document.getElementById("loading");
+    } 
+    element = document.getElementById("loading");
+    element.innerHTML = "読み込み完了です";
+  });
+</script>
 </body>
